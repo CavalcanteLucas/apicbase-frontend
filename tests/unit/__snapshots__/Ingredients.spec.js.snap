@@ -5,7 +5,7 @@ exports[`ingredients view renders 1`] = `
   <div class="container">
     <div class="col-12 mx-auto">
       <div class="row">
-        <div class="col-4 mx-auto">
+        <div class="col-md-4 mx-auto">
           <div class="input-group mb-3"><span id="search-ingredient" class="input-group-text"><img src="../assets/img/search.svg" alt="Search"></span> <input type="text" id="searchField" class="form-control"> <button type="button" id="clearSearchBtn" class="btn btn-outline-secondary"><img src="../assets/img/backspace.svg" alt="Clear Search"></button></div>
         </div>
       </div>

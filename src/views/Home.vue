@@ -39,7 +39,7 @@ export default {
 
 <style scoped>
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 600;
   margin-top: 3rem;
 }

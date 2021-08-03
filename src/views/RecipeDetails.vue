@@ -96,7 +96,7 @@
             </div>
             <h5>
               <strong
-                ><u>Total cost: &euro;{{ recipeCost }}</u></strong
+                >Total cost: &euro;{{ recipeCost }}</strong
               >
             </h5>
           </div>
@@ -133,24 +133,24 @@ export default {
   },
   methods: {
     async getIngredients() {
-      let response = await fetch("http://localhost:8000/api/ingredients/");
+      let response = await fetch(`${process.env.VUE_APP_BACKEND_API}/api/ingredients/`);
       this.ingredients = await response.json();
     },
     async getRecipe() {
       let response = await fetch(
-        `http://localhost:8000/api/recipes/${this.$route.params.id}/`
+        `${process.env.VUE_APP_BACKEND_API}/api/recipes/${this.$route.params.id}/`
       );
       this.recipe = await response.json();
     },
     async getRecipeDetails() {
       let response = await fetch(
-        `http://localhost:8000/api/recipes/${this.$route.params.id}/details/`
+        `${process.env.VUE_APP_BACKEND_API}/api/recipes/${this.$route.params.id}/details/`
       );
       this.recipeDetails = await response.json();
     },
     async getRecipeCost() {
       let response = await fetch(
-        `http://localhost:8000/api/recipes/${this.$route.params.id}/cost/`
+        `${process.env.VUE_APP_BACKEND_API}/api/recipes/${this.$route.params.id}/cost/`
       );
       this.recipeCost = await response.json();
     },
@@ -160,7 +160,7 @@ export default {
       await this.getRecipeCost();
       const ok = await this.$refs.confirmDialogue[0].show();
       if (ok) {
-        await fetch(`http://localhost:8000/api/recipes-formulas/${item.id}/`, {
+        await fetch(`${process.env.VUE_APP_BACKEND_API}/api/recipes-formulas/${item.id}/`, {
           method: "delete",
           headers: {
             "Content-Type": "application/json",
@@ -176,7 +176,7 @@ export default {
       await this.getRecipe();
       await this.getRecipeDetails();
       await this.getRecipeCost();
-      await fetch("http://localhost:8000/api/recipes-formulas/", {
+      await fetch(`${process.env.VUE_APP_BACKEND_API}/api/recipes-formulas/`, {
         method: "post",
         headers: {
           "Content-Type": "application/json",

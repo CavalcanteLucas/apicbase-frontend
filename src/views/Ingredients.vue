@@ -3,7 +3,7 @@
     <div class="container">
       <div class="col-12 mx-auto">
         <div class="row">
-          <div class="col-4 mx-auto">
+          <div class="col-md-4 mx-auto">
             <div class="input-group mb-3">
               <span class="input-group-text" id="search-ingredient"
                 ><img src="../assets/img/search.svg" alt="Search"
@@ -203,12 +203,12 @@ export default {
       }
     },
     async getIngredients() {
-      let response = await fetch("http://localhost:8000/api/ingredients/");
+      let response = await fetch(`${process.env.VUE_APP_BACKEND_API}/api/ingredients/`);
       this.ingredients = await response.json();
     },
     async createIngredient() {
       await this.getIngredients();
-      let response = await fetch("http://localhost:8000/api/ingredients/", {
+      let response = await fetch(`${process.env.VUE_APP_BACKEND_API}/api/ingredients/`, {
         method: "post",
         headers: {
           "Content-Type": "application/json",
@@ -221,7 +221,7 @@ export default {
     async editIngredient() {
       await this.getIngredients();
       let response = await fetch(
-        `http://localhost:8000/api/ingredients/${this.ingredient.id}/`,
+        `${process.env.VUE_APP_BACKEND_API}/api/ingredients/${this.ingredient.id}/`,
         {
           method: "put",
           headers: {
@@ -237,7 +237,7 @@ export default {
       await this.getIngredients();
       const ok = await this.$refs.confirmDialogue[0].show();
       if (ok) {
-        await fetch(`http://localhost:8000/api/ingredients/${ingredient.id}/`, {
+        await fetch(`${process.env.VUE_APP_BACKEND_API}/api/ingredients/${ingredient.id}/`, {
           method: "delete",
           headers: {
             "Content-Type": "application/json",
