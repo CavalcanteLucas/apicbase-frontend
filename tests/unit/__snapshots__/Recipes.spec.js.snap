@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`recipes view renders 1`] = `
+<div id="recipes">
+  <div class="container">
+    <div class="col-12 mx-auto">
+      <div class="row">
+        <div class="col-4 mx-auto">
+          <div class="input-group mb-3"><span id="search-recipe" class="input-group-text"><img src="../assets/img/search.svg" alt="Search"></span> <input type="text" id="searchField" class="form-control"> <button type="button" id="clearSearchBtn" class="btn btn-outline-secondary"><img src="../assets/img/backspace.svg" alt="Clear Search"></button></div>
+        </div>
+      </div>
+      <div class="row" style="padding-top: 1rem;">
+        <div class="col-6 mx-auto">
+          <form id="recipesForm">
+            <div class="input-group"><input type="text" id="inputName" placeholder="Name" aria-label="Name" required="required" class="form-control"> <button type="button" id="clearBtn" class="btn btn-outline-secondary"><img src="../assets/img/backspace.svg" alt="Clear"></button> <button type="submit" id="submitBtn" class="btn btn-primary">
+                Save
+              </button></div>
+          </form>
+        </div>
+      </div>
+      <!---->
+      <div class="row" style="padding-top: 2rem;">
+        <div class="col-8 mx-auto">
+          <table aria-label="Recipes table" class="table table-striped table-hovering">
+            <thead>
+              <th scope="col"></th>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

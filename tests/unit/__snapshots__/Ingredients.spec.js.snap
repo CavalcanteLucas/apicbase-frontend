@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ingredients view renders 1`] = `
+<div id="ingredients">
+  <div class="container">
+    <div class="col-12 mx-auto">
+      <div class="row">
+        <div class="col-4 mx-auto">
+          <div class="input-group mb-3"><span id="search-ingredient" class="input-group-text"><img src="../assets/img/search.svg" alt="Search"></span> <input type="text" id="searchField" class="form-control"> <button type="button" id="clearSearchBtn" class="btn btn-outline-secondary"><img src="../assets/img/backspace.svg" alt="Clear Search"></button></div>
+        </div>
+      </div>
+      <div class="row justify-content-center" style="padding-top: 1rem;">
+        <div class="col-md-10 offset-md-1">
+          <form id="ingredientForm">
+            <div class="row g-1">
+              <div class="col-md-1"><input type="number" id="inputArticleNumber" placeholder="#" min="1" required="required" class="form-control"></div>
+              <div class="col-md-3"><input type="text" id="inputName" placeholder="Name" aria-label="Name" required="required" class="form-control"></div>
+              <div class="col-md-2"><input type="number" id="inputAmount" placeholder="Amount" min=".01" step=".01" required="required" class="form-control"></div>
+              <div class="col-md-1"><select aria-label="Select unit" id="inputUnit" required="required" class="form-select">
+                  <option value="unit">Unit</option>
+                  <option value="gram">gram</option>
+                  <option value="kilogram">kilogram</option>
+                  <option value="liter">liter</option>
+                  <option value="centiliter">centiliter</option>
+                </select></div>
+              <div class="col-md-2">
+                <div class="input-group mb-3"><span id="inputCostPerAmount" class="input-group-text">€</span> <input type="number" id="inputCostPerAmount" placeholder="Cost" min=".01" step=".01" required="required" class="form-control"></div>
+              </div>
+              <div class="col-md-3"><button type="button" id="clearBtn" class="btn btn-outline-secondary float-start"><img src="../assets/img/backspace.svg" alt="Clear"></button> <button type="submit" id="submitBtn" class="btn btn-primary float-start" style="margin-left: 0.25rem;">
+                  Save
+                </button></div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!---->
+      <div class="row" style="padding-top: 2rem;">
+        <div class="col-12 mx-auto">
+          <table aria-label="Ingredients table" class="table table-striped table-hovering">
+            <thead>
+              <th scope="col"><strong>#</strong></th>
+              <th scope="col">Name</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Unit</th>
+              <th scope="col">Cost</th>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
