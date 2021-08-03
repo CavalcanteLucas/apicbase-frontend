@@ -13,7 +13,7 @@
             Welcome to this Application. <br />
             For more details, check out the
             <a
-              href="https://github.com/cavalcantelucas/apicbase"
+              href="https://github.com/cavalcantelucas/apicbase-frontend"
               target="_blank"
               rel="noopener"
               >GitHub code repo</a

@@ -22,11 +22,11 @@ exports[`recipe details view renders 1`] = `
           <div class="col-12" style="padding-top: 2rem;">
             <form id="recipesForm">
               <div class="row g-1">
-                <div class="col-md-2  ms-auto"><select id="selectedIngredient" aria-label="Select ingredient" required="required" class="form-select">
+                <div class="col-md-4  ms-auto"><select id="selectedIngredient" aria-label="Select ingredient" required="required" class="form-select">
                     <option value="0">carrot (gram)</option>
                     <option value="1">cream (centiliter)</option>
                   </select></div>
-                <div class="col-md-1 "><input type="number" id="inputAmount" placeholder="Amount" aria-label="Amount" min=".01" step=".01" required="required" class="form-control"></div>
+                <div class="col-md-2 "><input type="number" id="inputAmount" placeholder="Amount" aria-label="Amount" min=".01" step=".01" required="required" class="form-control"></div>
                 <div class="col-md-3 "><button type="button" id="clearBtn" class="btn btn-outline-secondary float-start"><img src="../assets/img/backspace.svg" alt="Clear"></button> <button type="submit" id="submitBtn" class="btn btn-success float-start" style="margin-left: 0.25rem;"><img src="../assets/img/plus-circle.svg" alt="Add"></button></div>
               </div>
             </form>

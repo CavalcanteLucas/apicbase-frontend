@@ -44,7 +44,7 @@
             <div class="col-12" style="padding-top: 2rem;">
               <form id="recipesForm" @submit.prevent="createRecipeFormula">
                 <div class="row g-1">
-                  <div class="col-md-2  ms-auto">
+                  <div class="col-md-4  ms-auto">
                     <select
                       id="selectedIngredient"
                       class="form-select"
@@ -60,7 +60,7 @@
                       >
                     </select>
                   </div>
-                  <div class="col-md-1 ">
+                  <div class="col-md-2 ">
                     <input
                       type="number"
                       class="form-control"
